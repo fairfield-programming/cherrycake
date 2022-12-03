@@ -10,7 +10,7 @@ If you are able to create an installation shortcut for Cherry Cake, please let u
 
 ## Examples
 
-### Hello World
+### Hello World (`hello_world.chry`)
 
 The 'hello world' example is the most basic http-program that you can make in Cherry Cake. If you run this following code and visit [localhost:3000](http://localhost:3000/), you will see "Hello World".
 
@@ -26,7 +26,7 @@ get ~/ {
 
 ```
 
-### Top-level Example
+### Top-level Example (`top_level.chry`)
 
 Top-level means that code in Cherry Cake does not need to be inside of a 'main' or 'start' function. This makes Cherry Cake a bit more flexible and simple than some traditional languages because it reduces the need to boilerplate code. But, Top-level programming can still be a bit tricky in Cherry Cake.
 The following code will run immediately since there are no server endpoints in the below code. If there were endpoints, the code would wait for the server to initialize and then run the REPL code after. 
