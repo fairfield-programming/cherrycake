@@ -13,59 +13,60 @@
 #pragma once
 
 // Struct for defining each scope
-struct Scope {
-    
+struct Scope
+{
+
     std::string name;
-    
+
     std::string start;
     std::string end;
-    
+
     std::string initiator;
     std::string conditional;
-    
+
     bool uses_start;
-    
-    Scope(std::string _name, std::string a, std::string b, bool _uses_start) {
-        
+
+    Scope(std::string _name, std::string a, std::string b, bool _uses_start)
+    {
+
         name = _name;
         uses_start = _uses_start;
-        
-        if (_uses_start) {
-            
+
+        if (_uses_start)
+        {
+
             start = a;
             end = b;
-            
-        } else {
-            
+        }
+        else
+        {
+
             initiator = a;
             conditional = b;
-            
         }
-        
     }
-    
 };
 
 // Struct for defining each symbol
-struct Symbol {
-    
+struct Symbol
+{
+
     std::string name;
     std::string data;
-    
-    Symbol(std::string _name, std::string _data) {
-        
+
+    Symbol(std::string _name, std::string _data)
+    {
+
         name = _name;
         data = _data;
-        
     }
-    
 };
 
 // Define all posible keywords that the language can support
 const std::string keywords[] = {
     // Defining Functions
     "func",
-    
+
     // Conditional Logic Package
     "if",
     "else",
@@ -97,8 +98,7 @@ const std::string keywords[] = {
     "int",
     "float",
     "bool",
-    "string"
-};
+    "string"};
 
 // Define all posible symbols that the language can support
 const Symbol symbols[] = {
@@ -121,8 +121,7 @@ const Symbol symbols[] = {
     Symbol("SUB_OPERATOR", "-"),
     Symbol("DIV_OPERATOR", "/"),
     Symbol("MUL_OPERATOR", "*"),
-    Symbol("MOD_OPERATOR", "%")
-};
+    Symbol("MOD_OPERATOR", "%")};
 
 // Define all of the possible scopes in the programming language
 const Scope scopes[] = {
