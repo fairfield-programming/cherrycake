@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C1515352937B2F00058D61B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C1515342937B2F00058D61B /* main.cpp */; };
+		9C2F074E2937B5E50042CD08 /* console.h in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F074D2937B5E50042CD08 /* console.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,16 @@
 /* Begin PBXFileReference section */
 		9C1515312937B2F00058D61B /* cherrycake */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cherrycake; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1515342937B2F00058D61B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9C15153C2937B3880058D61B /* test.chry */ = {isa = PBXFileReference; lastKnownFileType = text; name = test.chry; path = cherrycake/examples/test.chry; sourceTree = SOURCE_ROOT; };
+		9C2F074D2937B5E50042CD08 /* console.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = console.h; sourceTree = "<group>"; };
+		9C2F07512937DBE90042CD08 /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
+		9C2F07522937E7300042CD08 /* token_triggers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = token_triggers.h; sourceTree = "<group>"; };
+		9C2F0753293A3B790042CD08 /* lexer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
+		9C4E029D293B8944001F5E70 /* statement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = statement.h; sourceTree = "<group>"; };
+		9C4E029E293B89FF001F5E70 /* if_statement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = if_statement.h; sourceTree = "<group>"; };
+		9C4E029F293B8AD4001F5E70 /* ast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ast.h; sourceTree = "<group>"; };
+		9C4E02A0293B91E5001F5E70 /* expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = expression.h; sourceTree = "<group>"; };
+		9C4E02A1293B9247001F5E70 /* boolean_expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = boolean_expression.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +52,8 @@
 		9C1515282937B2F00058D61B = {
 			isa = PBXGroup;
 			children = (
-				9C1515332937B2F00058D61B /* cherrycake */,
+				9C15153B2937B36D0058D61B /* examples */,
+				9C1515332937B2F00058D61B /* src */,
 				9C1515322937B2F00058D61B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +66,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C1515332937B2F00058D61B /* cherrycake */ = {
+		9C1515332937B2F00058D61B /* src */ = {
 			isa = PBXGroup;
 			children = (
+				9C2F0755293B89000042CD08 /* ast */,
 				9C1515342937B2F00058D61B /* main.cpp */,
+				9C2F074D2937B5E50042CD08 /* console.h */,
+				9C2F07512937DBE90042CD08 /* tokenizer.h */,
+				9C2F07522937E7300042CD08 /* token_triggers.h */,
+				9C2F0753293A3B790042CD08 /* lexer.h */,
 			);
-			path = cherrycake;
+			path = src;
+			sourceTree = "<group>";
+		};
+		9C15153B2937B36D0058D61B /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				9C15153C2937B3880058D61B /* test.chry */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		9C2F0755293B89000042CD08 /* ast */ = {
+			isa = PBXGroup;
+			children = (
+				9C4E029D293B8944001F5E70 /* statement.h */,
+				9C4E029E293B89FF001F5E70 /* if_statement.h */,
+				9C4E029F293B8AD4001F5E70 /* ast.h */,
+				9C4E02A0293B91E5001F5E70 /* expression.h */,
+				9C4E02A1293B9247001F5E70 /* boolean_expression.h */,
+			);
+			path = ast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1515352937B2F00058D61B /* main.cpp in Sources */,
+				9C2F074E2937B5E50042CD08 /* console.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_NO_COMMON_BLOCKS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_NO_COMMON_BLOCKS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
