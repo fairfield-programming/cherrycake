@@ -1,0 +1,39 @@
+name: Release Build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+    types: [closed]
+
+jobs:
+  publish:
+    name: Publish Executable
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            asset_name: CherryCake Linux
+            artifact_name: build/CherryCake
+          - os: windows-latest
+            asset_name: CherryCake Windows
+            artifact_name: build/CherryCake.exe
+          - os: macos-latest
+            asset_name: CherryCake MacOS
+            artifact_name: build/CherryCake
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run the CMake Commands
+        run: mkdir build; cd build; cmake ..; cmake --build .; cd ..
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ matrix.artifact_name }}
+          asset_name: ${{ matrix.asset_name }}
+          tag: ${{ github.ref }}
