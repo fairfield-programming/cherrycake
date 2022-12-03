@@ -36,6 +36,8 @@
 		9C4E029F293B8AD4001F5E70 /* ast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ast.h; sourceTree = "<group>"; };
 		9C4E02A0293B91E5001F5E70 /* expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = expression.h; sourceTree = "<group>"; };
 		9C4E02A1293B9247001F5E70 /* boolean_expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = boolean_expression.h; sourceTree = "<group>"; };
+		9C4E02A2293B9ACB001F5E70 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9C4E02A3293B9EC5001F5E70 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,8 @@
 		9C1515282937B2F00058D61B = {
 			isa = PBXGroup;
 			children = (
+				9C4E02A3293B9EC5001F5E70 /* LICENSE.md */,
+				9C4E02A2293B9ACB001F5E70 /* README.md */,
 				9C15153B2937B36D0058D61B /* examples */,
 				9C1515332937B2F00058D61B /* src */,
 				9C1515322937B2F00058D61B /* Products */,
